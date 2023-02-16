@@ -35,8 +35,8 @@ public class BasicSecurityConfig {
                 .cors();
         httpSecurity
                 .authorizeHttpRequests((auth) -> auth
-                        .requestMatchers("/usuarios/logar").permitAll()
-                        .requestMatchers("/usuarios/cadastrar").permitAll()
+                        .requestMatchers("/usuario/logar").permitAll()
+                        .requestMatchers("/usuario/cadastrar").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS).permitAll()
                         .anyRequest().authenticated())
                 .httpBasic();

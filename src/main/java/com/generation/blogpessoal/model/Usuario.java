@@ -2,6 +2,7 @@ package com.generation.blogpessoal.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -21,6 +22,7 @@ public class Usuario {
     @NotNull(message = "O nome é obrigatório.")
     private String nome;
 
+    @Schema(example = "email@email.com.br")
     @NotNull(message = "O e-mail é obritório.")
     @Email(message = "Obrigatório um endereço de e-mail válido.")
     private String usuario;
@@ -48,7 +50,7 @@ public class Usuario {
     }
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
@@ -56,7 +58,7 @@ public class Usuario {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
@@ -64,7 +66,7 @@ public class Usuario {
     }
 
     public String getUsuario() {
-        return usuario;
+        return this.usuario;
     }
 
     public void setUsuario(String usuario) {
@@ -72,7 +74,7 @@ public class Usuario {
     }
 
     public String getSenha() {
-        return senha;
+        return this.senha;
     }
 
     public void setSenha(String senha) {
@@ -80,7 +82,7 @@ public class Usuario {
     }
 
     public String getFoto() {
-        return foto;
+        return this.foto;
     }
 
     public void setFoto(String foto) {
